@@ -1,0 +1,274 @@
+@charset "utf-8";
+* {
+    font-size: 16px;
+    padding: 0px;
+    margin: 0px
+}
+
+body {
+    color: #000;
+    background-color: #FFF;
+    padding: 0px;
+    margin: 0px auto;
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: Microsoft YaHei, Helvitica, Verdana, Tohoma, Arial, san-serif;
+    font-size: 16px;
+    max-width: 640px;
+}
+
+#top {
+}
+
+/*主要用于页面顶部特殊功能，宽度通常全屏*/
+
+#header, #content, #footer {
+    width: 98%;
+    margin: 0px auto;
+    border: 0px solid green;
+}
+
+#bottom {
+}
+
+div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: #333333;
+}
+
+img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    max-width: 100%
+}
+
+p {
+    margin: 0px 0px 1em 0;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0; /* Remove most spacing between table cells.*/
+}
+
+li {
+    list-style: none outside none;
+}
+
+/*链接*/
+
+a {
+    text-decoration: none;
+    color: #000;
+    background: transparent;
+    outline: none
+}
+
+a:visited {
+}
+
+a:focus {
+    outline: none;
+}
+
+a:hover, a:active {
+    color: #ff539f;
+    outline: none;
+}
+
+/*主要用于页面底部特殊功能，宽度通常全屏*/
+
+h1 {
+    font-size: 1.3em;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+h3 {
+    font-size: 1.17em;
+    margin: 0;
+}
+
+h4 {
+    font-size: 1em;
+    margin: 0;
+}
+
+h5 {
+    font-size: 0.83em;
+    margin: 0;
+}
+
+h6 {
+    font-size: 0.67em;
+    margin: 0;
+}
+
+.textlist li, .gridlist li, .wxlist li, .thumblist li {
+    font-size: 16px;
+    line-height: 1.5em;
+    vertical-align: middle;
+    background-color: #FFF;
+    overflow: hidden;
+}
+
+.textlist li:hover, .thumblist li:hover, .gridlist li:hover {
+    background-color: #f4f2fa;
+    cursor: pointer;
+}
+
+.textlist li .price, .gridlist li .price, .wxlist li .price, .thumblist li .price {
+    color: #F00;
+    float: right
+}
+
+.InfoTitle, .ChannelName {
+    font-size: 18px;
+    line-height: 1.5em;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.body_article, .body_download, .body_picture, .body_product, .body_page, .body_video, .body_job, .body_feedback {
+    background-color: #e2e3e6;
+}
+
+.single, .article, .picture, .download, .video, .product, .job, .guestbook, .sitemap, .feedback {
+    width: 99%;
+    margin: 0px auto
+}
+
+div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: #333333;
+}
+
+img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    max-width: 100%
+}
+
+/*分享按钮*/
+
+.tool {
+    width: 95%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.tool a {
+    color: #000;
+    font-size: 16px
+}
+
+.tool table {
+    width: 100%;
+    margin: 5px 0px
+}
+
+.tool td {
+    padding: 3px 5px;
+    width: 50%;
+    text-align: center
+}
+
+/*分享到朋友圈弹出框提示*/
+
+#guide {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 20000;
+}
+
+#guide img {
+    position: fixed;
+    right: 18px;
+    top: 5px;
+    width: 260px;
+    height: 180px;
+    z-index: 20001;
+}
+
+.ChannelName {
+}
+
+.ChannelContent {
+}
+
+.ChannelSContent {
+}
+
+a.btn {
+    display: block;
+    width: 99%;
+    color: #000000;
+    font-size: 16px;
+    padding: 8px 0px;
+    background-color: rgb(255, 255, 255);
+    background-image: linear-gradient(to top, rgb(245, 245, 245), rgb(255, 255, 255));
+    border: 1px solid rgb(211, 211, 211);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.15);
+    -o-box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.15);
+    text-shadow: 0.5px 0.5px 1px rgb(255, 255, 255);
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    cursor: pointer;
+}
+
+.copyright {
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    border: 0px solid red
+}
+
+.copyright a {
+    color: #666;
+}
+
+
+/*常用颜色*/
+
+.blue {color: #00F !important;}
+
+.green {color: #0F0 !important;}
+
+.red {color: #F00 !important;}
+
+.black {color: #000000 !important;}
+
+.white {color: #FFFFFF !important;}
+
+
+
+/*清除浮动*/
+
+.clear { display:block; clear:both;}
