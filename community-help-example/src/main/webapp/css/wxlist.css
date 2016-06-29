@@ -1,0 +1,123 @@
+
+.wxlist li {
+
+    overflow: hidden;
+
+    border-radius: 5px 5px 10px 10px;
+    -moz-border-radius: 5px 5px 10px 10px;
+    -webkit-border-radius: 5px 5px 10px 10px;
+    -o-border-radius: 5px 5px 10px 10px;
+
+    border: 1px solid #d0d1d4;
+
+    margin: 10px auto;
+
+    padding: 8px 8px;
+
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+    -o-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+
+    background: url(../ky_img/bottom.png) repeat-x scroll left bottom #FFFFFF;
+
+    background-size: 2px auto;
+
+}
+
+.wxlist li .InfoTime {
+}
+
+.wxlist li .GoTop {
+    text-align: center;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    color: #000
+}
+
+.wxlist li .InfoPicture, .wxlist li .ChannelPicture {
+    border: 0px solid red
+}
+
+.wxlist li .InfoPicture img, .wxlist li .ChannelPicture img {
+    width: 100%;
+}
+
+.wxlist li .InfoSContent, .wxlist li .ChannelSContent {
+    line-height: 1.5em;
+    border: 0px solid #900;
+    padding: 5px 2px;
+    color: #222222;
+    font-size: 14px;
+}
+
+.wxlist li .ShowInfo {
+}
+
+.wxlist .InfoTimeSide {
+
+    /*侧边时间显示*/
+
+    margin: 10px 8px 0px 0px;
+
+    width: auto;
+
+    font-size: 12px;
+
+    float: left;
+
+    background-color: #6c6b6a;
+
+    padding: 5px;
+
+    position: relative;
+
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -o-border-radius: 12px;
+
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.14);
+    -webkit-box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.14);
+    -moz-box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.14);
+    -o-box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.14);
+
+    font-family: Georgia, "Times New Roman", Times, serif;
+
+}
+
+.wxlist InfoTimeSide p {
+    color: #FFF
+}
+
+.wxlist .InfoTimeSide p b {
+    font-size: 20px;
+}
+
+.wxlist .InfoTimeSide p i {
+    font-size: 11px;
+}
+
+.wxlist .InfoTimeSide span {
+    position: absolute;
+    top: 10px;
+    right: -4px;
+
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+
+    width: 12px;
+    height: 12px;
+
+    transform: rotate(45deg);
+
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+
+    background-color: #6c6b6a;
+
+}
