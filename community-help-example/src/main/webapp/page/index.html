@@ -6,6 +6,8 @@
     <meta name="keywords" content="社区帮" />
     <meta name="description" content="社区帮是一个小区沟通、信息分享、团购的服务平台。" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>社区帮</title>
     <link href="../css/frozen.css" rel="stylesheet" type="text/css" />
     <link href="../css/common.css" rel="stylesheet" type="text/css" />
@@ -27,6 +29,39 @@
     <!--script src="https://cdn.bootcss.com/zepto/1.1.6/zepto.js"></script-->
     <script src="../js/common.js"></script>
     <script src="../js/plusmenu.js"></script>
+
+    <link rel="stylesheet" href="../css/pullToRefresh.css"/>
+    <script src="../js/iscroll.js"></script>
+    <script src="../js/pullToRefresh.js"></script>
+    <style type="text/css" media="all">
+        .pullUpLabel{
+            display: block;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+            font-size: 12px;
+            color: #888;
+            font-family: Arial, Microsoft YaHei;
+            background-color: #333;
+        }
+        .pullDownLabel{
+            display: block;
+            text-align: center;
+            height: 40px;
+            line-height: 40px;
+            font-size: 12px;
+            color: #888;
+            font-family: Arial, Microsoft YaHei;
+            background-color: #333;
+        }
+        .pullDownLabel img {
+            width: 13px;
+            height: 13px;
+            margin-top: -1px;
+            vertical-align: -2px;
+            margin-right: 5px;
+        }
+    </style>
 </head>
 <body>
 <!--页眉开始-->
@@ -138,29 +173,27 @@
     <div class="clear"></div>
 </div>
 <!--图文列表 开始-->
-<ul class="ui-list ui-list-link ui-border-tb">
-    <li class="ui-border-t">
-        <div class="ui-list-img">
-            <span style="background-image:url(../images/tudou.jpg)"></span>
-        </div>
-        <div class="ui-list-info">
-            <h4 class="ui-nowrap">土豆</h4>
-            <p class="ui-nowrap">荷兰土豆，批发价1元，货到付款，不满意不要</p>
-        </div>
-    </li>
-    <li class="ui-border-t">
-        <div class="ui-list-img">
-            <span style="background-image:url(../images/fanqian.jpg)"></span>
-        </div>
-        <div class="ui-list-info">
-            <h4>番茄</h4>
-            <p class="ui-nowrap">番茄，批发价1元，货到付款，不满意不要</p>
-        </div>
-    </li>
-</ul>
-<div class="ui-loading-wrap">
-    <p>加载中</p>
-    <i class="ui-loading"></i>
+<div id="wrapper">
+    <ul class="ui-list ui-list-link ui-border-tb">
+        <li class="ui-border-t">
+            <div class="ui-list-img">
+                <span style="background-image:url(../images/tudou.jpg)"></span>
+            </div>
+            <div class="ui-list-info">
+                <h4 class="ui-nowrap">土豆</h4>
+                <p class="ui-nowrap">荷兰土豆，批发价1元，货到付款，不满意不要</p>
+            </div>
+        </li>
+        <li class="ui-border-t">
+            <div class="ui-list-img">
+                <span style="background-image:url(../images/fanqian.jpg)"></span>
+            </div>
+            <div class="ui-list-info">
+                <h4>番茄</h4>
+                <p class="ui-nowrap">番茄，批发价1元，货到付款，不满意不要</p>
+            </div>
+        </li>
+    </ul>
 </div>
 <!--图文列表 结束-->
 <!--页脚开始-->
@@ -205,5 +238,39 @@
     </div>
 </div>
 <!--页脚结束-->
+
+<script>
+    refresher.init({
+        id:"wrapper",
+        pullDownAction:Refresh,
+        pullUpAction:Load
+    });
+    function Refresh() {
+        setTimeout(function () {	// <-- Simulate network congestion, remove setTimeout from production!
+            var el, li, i;
+            el =document.querySelector("#wrapper ul");
+            //这里写你的刷新代码
+            document.getElementById("wrapper").querySelector(".pullDownIcon").style.display="none";
+            document.getElementById("wrapper").querySelector(".pullDownLabel").innerHTML="<img src='../css/ok.png'/>刷新成功";
+            setTimeout(function () {
+                wrapper.refresh();
+                document.getElementById("wrapper").querySelector(".pullDownLabel").innerHTML="";
+            },1000);//模拟qq下拉刷新显示成功效果
+            /****remember to refresh after  action completed！ ---yourId.refresh(); ----| ****/
+        }, 1000);
+    }
+    function Load() {
+        setTimeout(function () {// <-- Simulate network congestion, remove setTimeout from production!
+            var el, li, i;
+            el =document.querySelector("#wrapper ul");
+            for (i=0; i<2; i++) {
+                li = document.createElement('li');
+                li.innerHTML="<div class='ui-list-img'><span style='background-image:url(../images/fanqian.jpg)'></span></div><div class='ui-list-info'><h4>番茄</h4><p class='ui-nowrap'>番茄，批发价1元，货到付款，不满意不要</p></div>"
+                el.appendChild(li, el.childNodes[0]);
+            }
+            wrapper.refresh();/****remember to refresh after action completed！！！   ---id.refresh(); --- ****/
+        },2000);
+    }
+</script>
 </body>
 </html>
