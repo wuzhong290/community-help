@@ -1,0 +1,165 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+	<meta charset="utf-8" />
+
+    <meta name="viewport" content="user-scalable=no,width=device-width" />
+
+    <meta name="format-detection" content="telephone=no"/>
+
+	<title>手机网站</title>
+
+    <link rel="stylesheet" href="css/mobile.css" />   
+
+    <link rel="stylesheet" href="css/idangerous.swiper.css">
+
+    <script src="js/jquery-1.10.1.min.js"></script>
+
+    <script src="js/idangerous.swiper-2.1.min.js"></script>
+
+    <script src="js/myjs.js"></script>    
+
+</head> 
+
+<body>
+
+<div onClick="shareclose();" id="divsharefull" style="opacity:0.2;position:absolute;z-index:980;width:100%; height:100%;background-color:#000000;display:none;left:0px; top:0px;"></div><div class="bdsharebuttonbox" style="display:none;z-index:981;position:fixed; bottom:100px;padding:5px 0px 5px 10px;width:233px;border:1px solid #d0d0d0;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px;box-shadow: 2px 2px 2px #d8d8d8;text-align:center;background-color:#FFF;" id="divshare"><a href="#" class="bds_more" data-cmd="more"></a><a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a><a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a><a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a><a title="分享到网易微博" href="#" class="bds_t163" data-cmd="t163"></a><a title="分享到人人网" href="#" class="bds_renren" data-cmd="renren"></a></div><script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=86835285.js?cdnversion='+~(-new Date()/36e5)];</script> <script src="<>" charset="utf-8" type="text/javascript"></script><div id="dvtopbg"><img src="images/bg_header.png" ></div>
+
+<div id="dvtop" >
+
+
+
+
+
+<p id="toplogo"><img onLoad="loadlogo(this);" id="tiglog" style="display:none;" src="images/LogoiPhone.png" /></p>
+
+</div>
+
+
+
+
+
+<div id="dvmain">
+
+	<div class="app-sidebar">
+
+        	<p class="swiper-loading"></p>
+
+            <div class="device">
+
+                <div class="swiper-container">
+
+                    <div class="swiper-wrapper">
+
+					  <div class="swiper-slide"><img src="images/20143317598803b2d.jpg" alt="ss09_campaign_2" /></div><div class="swiper-slide"><img src="images/20143317598872777.jpg" alt="ss09_campaign_12" /></div><div class="swiper-slide"><img src="images/20143317598886167.jpg" alt="ss09_campaign_9" /></div><div class="swiper-slide"><img src="images/20143317598908fb4.jpg" alt="ss09_campaign_3" /></div><div class="swiper-slide"><img src="images/2014331759893013c.jpg" alt="ss09_campaign_10" /></div><div class="swiper-slide"><img src="images/20143317598946170.jpg" alt="ss09_campaign_8" /></div>
+
+					</div>
+
+                </div>
+
+            	<div class="pagination"></div>
+
+            </div>
+
+        </div>   
+
+	
+
+		<div id="dvmenu"><ul><li><a href="about.html"><img src="images/iph_2014341340177462ee.png" />关于我们</a></li>
+
+        <li><a href="photo.html"><img src="images/iph_2014341243269251da.png" />产品展厅</a></li>
+
+        <li><a href="video.html"><img src="images/iph_201435122135747652.png" />视频广告</a></li>
+
+        <li><a href="news.html"><img src="images/iph_201434132645389ea7.png" />新闻动态</a></li>
+
+        <li><a href="contact.html"><img src="images/iph_201434134617626d5d.png" />联系我们</a></li>
+
+        <li><a href="http://www.17sucai.com/" target=_blank><img src="images/iph_2014425154653519d43.png" />外部链接</a></li></ul></div>
+
+</div>
+
+<script>loadmain();</script>
+
+
+
+<div id="dvfoot"><ul><li><a id="aphone" href="tel:13800000000"><img src="images/butphone.jpg" /></a><a id="aemail" href="mailto:flash@flashine.cn"><img src="images/butemail.jpg" /></a><a id="amap" href="map.html"><img src="images/butmap.jpg" /></a><a id="ashare" onClick="shareopen();"><img src="images/butshare.jpg" /></a><a id="aleave" style="border:0px;" href="message.html"><img src="images/butleave.jpg" /></a></li></ul></div> <script> var sUserAgentfbdchi = navigator.userAgent.toLowerCase(); var bIsIpadfbdchi = sUserAgentfbdchi.match(/ipad/i) == "ipad";  var bIsIphoneOsfbdchi = sUserAgentfbdchi.match(/iphone os/i) == "iphone os";  if(bIsIpadfbdchi || bIsIphoneOsfbdchi) { var gchioto=window.location.href.toLowerCase().replace("/android/","/iphone/"); window.location.href = gchioto; } </script>
+
+<script type="text/javascript">
+
+$(window).load(function(){
+
+	$(".swiper-loading").hide();
+
+	$(".device").show();	
+
+	SwiperSlide();
+
+
+
+	var mySwiper = new Swiper('.swiper-container',{
+
+		pagination: '.pagination',
+
+		loop: true,
+
+		grabCursor: true,
+
+		paginationClickable: true
+
+	});
+
+});
+
+
+
+function SwiperSlide(){
+
+	var _img = $(".swiper-slide > img").eq(0);
+
+	var _imgw = _img.width();
+
+	var _imgh = _img.height();
+
+	
+
+	var _body = $(window).width()-24;		
+
+	var percent = parseFloat(_body/_imgw).toFixed(3);
+
+
+
+	$(".swiper-container").css("width", _body+"px").css("height", (_imgh*percent)+"px");
+
+	$(".swiper-slide > img").css("width", "100%");
+
+	
+
+	loadtop();
+
+	loadmain();
+
+	loadfoot();
+
+}
+
+
+
+if (document.attachEvent) {
+
+	window.attachEvent('onresize', SwiperSlide); 
+
+} else {
+
+	window.addEventListener('resize', SwiperSlide, false); 
+
+}
+
+</script>
+
+</body>
+
+</html>

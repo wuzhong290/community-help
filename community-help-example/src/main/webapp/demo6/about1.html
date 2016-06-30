@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+	<meta charset="utf-8" />
+
+    <meta name="viewport" content="user-scalable=no,width=device-width" />
+
+    <meta name="format-detection" content="telephone=no"/>
+
+	<title>公司简介</title>
+
+    <link rel="stylesheet" href="css/mobile.css" />   
+
+    <script src="js/jquery-1.10.1.min.js"></script>    
+
+    <script src="js/myjs.js"></script>    
+
+</head> 
+
+<body onResize="loadtop();loadmain();loadfoot();">
+
+<div onClick="shareclose();" id="divsharefull" style="opacity:0.2;position:absolute;z-index:980;width:100%; height:100%;background-color:#000000;display:none;left:0px; top:0px;"></div><div class="bdsharebuttonbox" style="display:none;z-index:981;position:fixed; bottom:100px;padding:5px 0px 5px 10px;width:233px;border:1px solid #d0d0d0;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px;box-shadow: 2px 2px 2px #d8d8d8;text-align:center;background-color:#FFF;" id="divshare"><a href="#" class="bds_more" data-cmd="more"></a><a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a><a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a><a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a><a title="分享到网易微博" href="#" class="bds_t163" data-cmd="t163"></a><a title="分享到人人网" href="#" class="bds_renren" data-cmd="renren"></a></div><script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=86835285.js?cdnversion='+~(-new Date()/36e5)];</script> <script src="<>" charset="utf-8" type="text/javascript"></script><div id="dvtopbg"><img src="images/bg_header.png" ></div>
+
+<div id="dvtop" >
+
+<p id="topback"><a href="javascript:history.go(-1);"><img src="images/ico_back.png"></a></p> <script> if (document.referrer=="") document.getElementById('topback').style.visibility='hidden'; </script>
+
+<p id="tophome"><a href="index.html"><img src="images/ico_home.png"></a></p>
+
+<p id="toplogo"><img onLoad="loadlogo(this);" id="tiglog" style="display:none;" src="images/LogoiPhone.png?a25ddd7b-3a9f-4f4d-8ced-c9fa8ef9b33d" /></p>
+
+</div>
+
+
+
+<script>loadtop();</script>
+
+
+
+<div id="dvmain">
+
+	 <div id="dvmimg"><img src="ke01_img/loadimg.gif" id="ilimg" /><img onload="loadfimg(this);" id="acfimg" src="images/2014331736562285b_Cut.png" style="border:1px solid #d0d0d0;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px;box-shadow: 2px 2px 2px #d8d8d8;display:none;" /></div>
+
+<div id="dvmtit">公司简介</div>
+
+<div id="dvminfo">
+	<img onload="loadpimg(this);" src="images/2014331736562285b_Cut.png" id="acpimg" style="border:1px solid #d0d0d0;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px;box-shadow: 2px 2px 2px #d8d8d8; float:left; margin-right:10px;display:none;" />
+	科蚁企业网站内容管理系统于2014年11月30日20时正式发布演示地址：http://demo.keyicms.com，12月1日17时开放下载，从立项到发布第一个测试版本，经过了将近半年的努力，融入了科蚁团队全体成员的心血；作为一款移动互联时代的新型企业建站系统，KEYICMS采用HTML5+CSS3技术作为前端构架，可自适应各种分辨率的PC显示器以及手机屏幕，强大的网页表现能力，让企业形象展示更加精彩，使您的网站以最绚丽的姿态进入客户的手机屏幕；同时一个后台即可轻松管理您网站的内容，可以指定不同的内容在PC、平板、手机等终端显示，为企业步入移动互联网站添砖加瓦。</div>
+
+
+
+</div>
+
+<script>loadmain();</script>
+
+
+
+<div id="dvfoot"><ul><li><a id="aphone" href="tel:13800000000"><img src="images/butphone.jpg" /></a><a id="aemail" href="mailto:flash@flashine.cn"><img src="images/butemail.jpg" /></a><a id="amap" href="map.html"><img src="images/butmap.jpg" /></a><a id="ashare" onClick="shareopen();"><img src="images/butshare.jpg" /></a><a id="aleave" style="border:0px;" href="message.html"><img src="images/butleave.jpg" /></a></li></ul></div> <script> var sUserAgentfbdchi = navigator.userAgent.toLowerCase(); var bIsIpadfbdchi = sUserAgentfbdchi.match(/ipad/i) == "ipad";  var bIsIphoneOsfbdchi = sUserAgentfbdchi.match(/iphone os/i) == "iphone os";  if(bIsIpadfbdchi || bIsIphoneOsfbdchi) { var gchioto=window.location.href.toLowerCase().replace("/android/","/iphone/"); window.location.href = gchioto; } </script>
+
+<script>loadfoot();</script>
+
+</body>
+
+</html>
+
