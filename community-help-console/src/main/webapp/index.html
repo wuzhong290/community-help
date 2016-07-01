@@ -1,205 +1,137 @@
 <!DOCTYPE html>
-<html>
- <head>
-  <title>某手机网站模板</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="author" content="某手机网站模板" />
-  <meta name="keywords" content="这里填写你的关键字" />
-  <meta name="description" content="17素材网是最专业的HTML5移动建站资源分享、交流学习生态圈，为大家提供更多的手机建站资源。" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-  <link href="css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-  <script src="js/common.js" type="text/javascript"></script>
-  <script>  //document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() { 
-
-  //		WeixinJSBridge.call('hideToolbar'); 
-
- // });
-
- //document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-
-//	WeixinJSBridge.call('hideOptionMenu');
-
-//  });
-
-
-
-/*
-
-function weixinAddContact(name){ 
-
-    WeixinJSBridge.invoke("addContact", {webtype: "1",username: name}, function(e) { 
-
-        //WeixinJSBridge.log(e.err_msg); 
-
-        //e.err_msg:add_contact:added 已经添加 
-
-        //e.err_msg:add_contact:cancel 取消添加 
-
-        //e.err_msg:add_contact:ok 添加成功 
-
-        if( e.err_msg == 'add_contact:ok'){ 
-
-            alert("关注成功");
-
-        } else if(e.err_msg == 'add_contact:added'){
-
-            alert("已经关注过!");
-
-        }else{
-
-            alert(e.err_msg);
-
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="user-scalable=no,width=device-width"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>产品详情</title>
+    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=37342703" charset="UTF-8"></script>
+    <link rel="stylesheet" href="css/frozen.css">
+    <link href="https://cdn.jsdelivr.net/flexslider/2.6.1/flexslider.css" rel="stylesheet" type="text/css"/>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/frozen.js"></script>
+    <script src="http://code.jquery.com/jquery-3.0.0.js" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo="
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/flexslider/2.6.1/jquery.flexslider-min.js"></script>
+    <script src="https://cdn.bootcss.com/zepto/1.1.6/zepto.min.js"></script>
+    <style>
+        .myflexslider {
+            position: relative
         }
 
-    }) 
+        .flex-caption {
+            width: 96%;
+            padding: 2%;
+            left: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, .5);
+            color: #fff;
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
+            font-size: 14px;
+            line-height: 18px;
+        }
+        #dvmain{ width:100%; padding:0px; padding-top:105px; padding-bottom:105px; overflow:hidden;display:none;}
 
-} 
+        #dvmenu{ padding-left:12px; padding-right:12px; color:#535353;}/*line-height:26px; font-size:18px;*/
 
-*/
+        #dvmenu li{ width:100%;	height:120px;  margin-top:22px; border:1px solid #d0d0d0; -moz-border-radius:6px; -webkit-border-radius:6px; border-radius:6px; background:#fafafa;}
+
+        #dvmenu li a{ width:100%; display:block; height:110px; font-size:36px; color:#868686; padding-top:10px;  background:url(../ke01_img/app-ico1.png) no-repeat right 50px;}
+
+        #dvmenu li a img{vertical-align:middle; margin-left:15px; margin-right:25px;}
+    </style>
+</head>
+<body ontouchstart>
+<header class="ui-header ui-header-positive ui-border-b">
+    <i id="topback" class="ui-icon-return" onclick="history.back()"></i>
+    <script>
+        if (document.referrer == "") document.getElementById('topback').style.visibility = 'hidden';
+    </script>
+    <h1>首页</h1>
+    <button class="ui-btn">回首页</button>
+</header>
+<footer class="ui-footer ui-footer-btn">
+    <ul class="ui-tiled ui-border-t">
+        <li data-href="index.html" class="ui-border-r">
+            <div>首页</div>
+        </li>
+        <li data-href="page/productlist.html" class="ui-border-r">
+            <div>产品展示</div>
+        </li>
+        <li data-href="tel:17712858268" class="ui-border-r">
+            <div>电话</div>
+        </li>
+        <li data-href="page/message.html">
+            <div>留言</div>
+        </li>
+        <li data-href="page/about.html">
+            <div>关于我们</div>
+        </li>
+    </ul>
+</footer>
+<section class="ui-container">
+    <!--幻灯片 开始-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.myflexslider').flexslider({
+                animation: "slide",
+                controlNav: false
+            });
+        });
+    </script>
+    <div class="myflexslider" style="margin-top:1px;">
+        <ul class="slides">
+            <li>
+                <a href="page/productlist.html">
+                    <img src="images/1408672627.jpg" width="100%"/>
+                    <p class="flex-caption">1</p>
+                </a>
+            </li>
+            <li>
+                <a href="page/productlist.html">
+                    <img src="images/1408672648.jpg" width="100%"/>
+                    <p class="flex-caption">2</p>
+                </a>
+            </li>
+            <li>
+                <a href="page/productlist.html">
+                    <img src="images/1408672632.jpg" width="100%"/>
+                    <p class="flex-caption">3</p>
+                </a>
+            </li>
+            <li>
+                <a href="page/productlist.html">
+                    <img src="images/1409647536.jpg" width="100%"/>
+                    <p class="flex-caption">4</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--幻灯片 结束-->
+    <div id="dvmenu">
+        <ul>
+            <li><a href="about.html"><img src="images/iph_2014341340177462ee.png" />关于我们</a></li>
+
+            <li><a href="photo.html"><img src="images/iph_2014341243269251da.png" />产品展厅</a></li>
+
+            <li><a href="video.html"><img src="images/iph_201435122135747652.png" />视频广告</a></li>
+
+            <li><a href="news.html"><img src="images/iph_201434132645389ea7.png" />新闻动态</a></li>
+
+            <li><a href="contact.html"><img src="images/iph_201434134617626d5d.png" />联系我们</a></li>
+        </ul>
+    </div>
+</section><!-- /.ui-container-->
+<script>
+    $('.ui-list li,.ui-tiled li').click(function () {
+        if ($(this).data('href')) {
+            location.href = $(this).data('href');
+        }
+    });
+    $('.ui-header .ui-btn').click(function () {
+        location.href = 'index.html';
+    });
 
 </script>
- </head>
- <body>
-  <!--页眉开始-->
-  <div id="header">
-   <!--幻灯片 开始-->
-   <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
-   <script type="text/javascript">          $(document).ready(function() {
-
-                $('.myflexslider').flexslider({
-
-                        controlNav: true, 
-
-                        directionNav: false,
-
-                        animation: "slide",
-
-                        //manualControls: ".myflexslider .slidenav"
-
-                    });
-
-          });
-
-        </script>
-   <div class="myflexslider" style="margin-top:1px;">
-    <ul class="slides">
-     <li><img src="images/1408672627.jpg" width="100%" /></li>
-     <li><img src="images/1408672648.jpg" width="100%" /></li>
-     <li><img src="images/1408672632.jpg" width="100%" /></li>
-     <li><img src="images/1409647536.jpg" width="100%" /></li>
-    </ul>
-   </div>
-   <!--幻灯片 结束-->
-  </div>
-  <div id="content">
-   <!--导航开始-->
-   <ul class="channellist">
-    <li><a href="About.html">
-      <div class="ChannelIcon">
-       <img src="images/about.jpg" />
-      </div>
-      <div class="ChannelName">
-       关于我们
-      </div></a></li>
-    <li><a href="News.html">
-      <div class="ChannelIcon">
-       <img src="images/news.jpg" />
-      </div>
-      <div class="ChannelName">
-       资讯中心
-      </div></a></li>
-    <li><a href="Product.html">
-      <div class="ChannelIcon">
-       <img src="images/Product.jpg" />
-      </div>
-      <div class="ChannelName">
-       产品中心
-      </div></a></li>
-    <li><a href="Case.html">
-      <div class="ChannelIcon">
-       <img src="images/1409023353.jpg" />
-      </div>
-      <div class="ChannelName">
-       案例展示
-      </div></a></li>
-    <li><a href="video.html">
-      <div class="ChannelIcon">
-       <img src="images/1408672415.jpg" />
-      </div>
-      <div class="ChannelName">
-       视频展示
-      </div></a></li>
-    <li><a href="Merchants.html">
-      <div class="ChannelIcon">
-       <img src="images/1408672427.jpg" />
-      </div>
-      <div class="ChannelName">
-       招商加盟
-      </div></a></li>
-    <li><a href="Recruitment.html">
-      <div class="ChannelIcon">
-       <img src="images/1408672443.jpg" />
-      </div>
-      <div class="ChannelName">
-       招贤纳士
-      </div></a></li>
-    <li><a href="Message.html">
-      <div class="ChannelIcon">
-       <img src="images/1408672456.jpg" />
-      </div>
-      <div class="ChannelName">
-       在线留言
-      </div></a></li>
-    <li><a href="Contact.html">
-      <div class="ChannelIcon">
-       <img src="images/1408672469.jpg" />
-      </div>
-      <div class="ChannelName">
-       联系我们
-      </div></a></li>
-   </ul>
-   <!--导航结束-->
-   <div class="clear"></div>
-  </div>
-  <!--页脚开始-->
-  <div id="footer">
-   <!-- 微信分享导引 开始-->
-   <script>        function openGuide(){ document.getElementById('guide').style.display='block'; }
-
-        function closeGuide(){ document.getElementById('guide').style.display=''; }
-
-    </script>
-   <div id="guide" onClick="closeGuide()">
-    <img src="images/guide.png" />
-   </div>
-   <!-- 微信分享导引 结束-->
-   <!--快捷按钮 开始-->
-   <div class="plug-div">
-    <div class="plug-phone">
-     <div class="plug-menu themeStyle">
-      <span class="close"></span>
-     </div>
-     <div class="themeStyle plug-btn plug-btn1 close">
-      <a href="/"><span style="background-image: url(ky_img/home.png);"></span></a>
-     </div>
-     <div class="themeStyle plug-btn plug-btn2 close">
-      <a href="Contact.html"><span style="background-image: url(ky_img/tel.png);"></span></a>
-     </div>
-     <div class="themeStyle plug-btn plug-btn3 close">
-      <a href="About.html"><span style="background-image: url(ky_img/aboutus.png);"></span></a>
-     </div>
-     <div class="themeStyle plug-btn plug-btn4 close">
-      <a href="Message.html"><span style="background-image: url(ky_img/guestbook.png);"></span></a>
-     </div>
-     <div class="plug-btn plug-btn5 close"></div>
-    </div>
-   </div>
-   <!--快捷按钮 结束-->
-   <div class="copyright">
-这里是底部信息<br>免责声明：所有资源仅供学习与参考，版权归原作者，请勿用于商业用途，否则产生的一切后果将由您自行承担，与17素材网无关。
-   </div>
-  </div>
-  <!--页脚结束-->
- </body>
+</body>
 </html>
