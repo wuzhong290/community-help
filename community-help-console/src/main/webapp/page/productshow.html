@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="user-scalable=no,width=device-width"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>产品详情</title>
+    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=37342703" charset="UTF-8"></script>
+    <link rel="stylesheet" href="../css/frozen.css">
+    <link rel="stylesheet" href="../css/pullToRefresh.css"/>
+    <link href="https://cdn.jsdelivr.net/flexslider/2.6.1/flexslider.css" rel="stylesheet" type="text/css"/>
+    <script src="../js/zepto.min.js"></script>
+    <script src="../js/frozen.js"></script>
+    <script src="../js/iscroll.js"></script>
+    <script src="../js/pullToRefresh.js"></script>
+</head>
+<body ontouchstart>
+<header class="ui-header ui-header-positive ui-border-b">
+    <i id="topback" class="ui-icon-return" onclick="history.back()"></i>
+    <script>
+        if (document.referrer == "") document.getElementById('topback').style.visibility = 'hidden';
+    </script>
+    <h1>首页</h1>
+    <button class="ui-btn">回首页</button>
+</header>
+<footer class="ui-footer ui-footer-btn">
+    <ul class="ui-tiled ui-border-t">
+        <li data-href="index.html" class="ui-border-r">
+            <div>首页</div>
+        </li>
+        <li data-href="page/productlist.html" class="ui-border-r">
+            <div>产品展示</div>
+        </li>
+        <li data-href="tel:17712858268" class="ui-border-r">
+            <div>电话</div>
+        </li>
+        <li data-href="page/message.html">
+            <div>留言</div>
+        </li>
+        <li data-href="page/about.html">
+            <div>关于我们</div>
+        </li>
+    </ul>
+</footer>
+<section class="ui-container">
+    <div id="wrapper">
+        <ul class="ui-list ui-list-link ui-border-tb">
+            <li class="ui-border-t" onclick="productdetail('productdetail.html');">
+                <div class="ui-list-img">
+                    <span style="background-image:url(../images/tudou.jpg)"></span>
+                </div>
+                <div class="ui-list-info">
+                    <h4 class="ui-nowrap">土豆</h4>
+                    <p class="ui-nowrap">荷兰土豆，批发价1元，货到付款，不满意不要</p>
+                </div>
+            </li>
+            <li class="ui-border-t" onclick="productdetail('productdetail.html');">
+                <div class="ui-list-img">
+                    <span style="background-image:url(../images/fanqian.jpg)"></span>
+                </div>
+                <div class="ui-list-info">
+                    <h4>番茄</h4>
+                    <p class="ui-nowrap">番茄，批发价1元，货到付款，不满意不要</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section><!-- /.ui-container-->
+<script>
+    $('.ui-list li,.ui-tiled li').click(function () {
+        if ($(this).data('href')) {
+            location.href = $(this).data('href');
+        }
+    });
+    $('.ui-header .ui-btn').click(function () {
+        location.href = 'index.html';
+    });
+    refresher.init({
+        id:"wrapper",
+        pullDownAction:Refresh,
+        pullUpAction:Load
+    });
+    function Refresh() {
+        setTimeout(function () {	// <-- Simulate network congestion, remove setTimeout from production!
+            var el, li, i;
+            el =document.querySelector("#wrapper ul");
+            //这里写你的刷新代码
+            document.getElementById("wrapper").querySelector(".pullDownIcon").style.display="none";
+            document.getElementById("wrapper").querySelector(".pullDownLabel").innerHTML="<img src='../css/ok.png'/>刷新成功";
+            setTimeout(function () {
+                wrapper.refresh();
+                document.getElementById("wrapper").querySelector(".pullDownLabel").innerHTML="";
+            },1000);//模拟qq下拉刷新显示成功效果
+            /****remember to refresh after  action completed！ ---yourId.refresh(); ----| ****/
+        }, 1000);
+    }
+    function Load() {
+        setTimeout(function () {// <-- Simulate network congestion, remove setTimeout from production!
+            var el, li, i;
+            el =document.querySelector("#wrapper ul");
+            for (i=0; i<2; i++) {
+                li = document.createElement('li');
+                li.innerHTML="<div class='ui-list-img'><span style='background-image:url(../images/fanqian.jpg)'></span></div><div class='ui-list-info'><h4>番茄</h4><p class='ui-nowrap'>番茄，批发价1元，货到付款，不满意不要</p></div>"
+                el.appendChild(li, el.childNodes[0]);
+            }
+            wrapper.refresh();/****remember to refresh after action completed！！！   ---id.refresh(); --- ****/
+        },2000);
+    }
+    function productdetail(url) {
+        window.location.href = url;
+    }
+</script>
+</body>
+</html>
