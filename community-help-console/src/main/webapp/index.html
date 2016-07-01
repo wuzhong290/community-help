@@ -62,6 +62,34 @@
     </style>
 </head>
 <body ontouchstart>
+<div onClick="shareclose();" id="divsharefull"
+style="opacity:0.2;position:absolute;z-index:980;width:100%; height:100%;background-color:#000000;display:none;left:0px; top:0px;"></div>
+<div class="bdsharebuttonbox" id="divshare"
+     style="display:none;z-index:981;position:fixed; bottom:50px;padding:5px 0px 5px 10px;width:233px;border:1px solid #d0d0d0;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px;box-shadow: 2px 2px 2px #d8d8d8;text-align:center;background-color:#FFF;">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone"></a>
+    <a href="#" class="bds_tqq" data-cmd="tqq"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina"></a>
+    <a href="#" class="bds_copy" data-cmd="copy"></a>
+</div>
+<script>
+    window._bd_share_config = {
+        "common": {
+            "bdSnsKey": {},
+            "bdText": "",
+            "bdMini": "2",
+            "bdPic": "",
+            "bdStyle": "0",
+            "bdSize": "24"
+        },
+        "share": {},
+        "image": {"viewList": ["qzone", "tsina", "tqq", "renren", "weixin"], "viewText": "分享到：", "viewSize": "16"},
+        "selectShare": {"bdContainerClass": null, "bdSelectMiniList": ["qzone", "tsina", "tqq", "renren", "weixin"]}
+    };
+    with (document)0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+</script>
 <header class="ui-header ui-header-positive ui-border-b">
     <i id="topback" class="ui-icon-return" onclick="history.back()"></i>
     <script>
@@ -81,11 +109,11 @@
         <li data-href="tel:17712858268" class="ui-border-r">
             <div>电话</div>
         </li>
+        <li onClick="shareopen();">
+            <div>分享</div>
+        </li>
         <li data-href="page/message.html">
             <div>留言</div>
-        </li>
-        <li data-href="page/about.html">
-            <div>关于我们</div>
         </li>
     </ul>
 </footer>
@@ -178,6 +206,31 @@
     });
     function productdetail(url) {
         window.location.href = url;
+    }
+    function shareload() {
+        if (document.getElementById('divsharefull').style.display == "none")return;
+        if (parseInt(document.documentElement.offsetHeight) > parseInt(document.documentElement.clientHeight)){
+            document.getElementById('divsharefull').style.height = document.documentElement.offsetHeight + 'px';
+        } else{
+            document.getElementById('divsharefull').style.height = document.documentElement.clientHeight + 'px';
+        }
+        setTimeout(shareload, 800);
+    }
+
+    function shareopen() {
+        document.getElementById("divshare").style.left = (document.documentElement.clientWidth - parseInt(document.getElementById("divshare").style.width)) / 2 + "px";
+        if (parseInt(document.documentElement.offsetHeight) > parseInt(document.documentElement.clientHeight)){
+            document.getElementById('divsharefull').style.height = document.documentElement.offsetHeight + 'px';
+        } else{
+            document.getElementById('divsharefull').style.height = document.documentElement.clientHeight + 'px';
+        }
+        $("#divshare").fadeIn(1000);
+        $("#divsharefull").fadeIn(300);
+        setTimeout(shareload, 800);
+    }
+    function shareclose() {
+        document.getElementById("divshare").style.display = "none";
+        document.getElementById('divsharefull').style.display = "none";
     }
 </script>
 </body>
