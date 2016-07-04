@@ -31,12 +31,6 @@
             line-height: 18px;
         }
 
-        #dvmenu {
-            padding-left: 12px;
-            padding-right: 12px;
-            color: #535353;
-        }
-
         #dvmenu li {
             width: 100%;
             height: 120px;
@@ -66,7 +60,7 @@
 <div onClick="shareclose();" id="divsharefull"
 style="opacity:0.2;position:absolute;z-index:980;width:100%; height:100%;background-color:#000000;display:none;left:0px; top:0px;"></div>
 <div class="bdsharebuttonbox" id="divshare"
-     style="display:none;z-index:981;position:fixed; bottom:50px;padding:5px 0px 5px 10px;width:233px;border:1px solid #d0d0d0;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px;box-shadow: 2px 2px 2px #d8d8d8;text-align:center;background-color:#FFF;">
+     style="display:none;z-index:981;position:fixed; bottom:50px;padding:5px 0px 5px 10px;width:233px;border:1px solid #d0d0d0;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px;box-shadow: 2px 2px 2px #d8d8d8;text-align:center;background-color:darkgray;">
     <a href="#" class="bds_more" data-cmd="more"></a>
     <a href="#" class="bds_weixin" data-cmd="weixin"></a>
     <a href="#" class="bds_sqq" data-cmd="sqq"></a>
@@ -85,9 +79,13 @@ style="opacity:0.2;position:absolute;z-index:980;width:100%; height:100%;backgro
             "bdStyle": "0",
             "bdSize": "24"
         },
-        "share": {},
-        "image": {"viewList": ["qzone", "tsina", "tqq", "renren", "weixin"], "viewText": "分享到：", "viewSize": "16"},
-        "selectShare": {"bdContainerClass": null, "bdSelectMiniList": ["qzone", "tsina", "tqq", "renren", "weixin"]}
+        "slide" : [{
+            bdImg : 0,
+            bdPos : "right",
+            bdTop : 100,
+            bdSize: 24
+        }],
+        "share": {}
     };
     with (document)0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
 </script>
