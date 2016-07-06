@@ -5,7 +5,8 @@ package com.letwgo.wechat; /**
 import com.letwgo.wechat.main.WxMpDemoInMemoryConfigStorage;
 import com.letwgo.wechat.main.handler.LogHandler;
 import com.letwgo.wechat.main.handler.TextHandler;
-import com.letwgo.wechat.main.handler.SubscribeHandler;
+import com.letwgo.wechat.main.handler.EventHandler;
+import me.chanjar.weixin.common.api.WxConsts;
 import me.chanjar.weixin.mp.api.*;
 import org.apache.log4j.helpers.Loader;
 import org.slf4j.Logger;
@@ -57,11 +58,11 @@ public class SiteConfig implements CommandLineRunner {
     public WxMpMessageRouter wxMpMessageRouter(){
         WxMpMessageHandler textHandler = new TextHandler();
         WxMpMessageHandler logHandler = new LogHandler();
-        SubscribeHandler subscribeHandler = new SubscribeHandler();
+        EventHandler eventHandler = new EventHandler();
         WxMpMessageRouter wxMpMessageRouter = new WxMpMessageRouter(wxMpService());
         wxMpMessageRouter
                 .rule().handler(logHandler).next()
-                .rule().async(false).event("subscribe").handler(subscribeHandler).end()
+                .rule().msgType(WxConsts.XML_MSG_EVENT).matcher(eventHandler).handler(eventHandler).end()
                 .rule().async(false).content("哈哈").handler(textHandler).end();
         return wxMpMessageRouter;
     }

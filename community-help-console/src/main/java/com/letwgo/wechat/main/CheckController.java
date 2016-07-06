@@ -1,4 +1,4 @@
-package com.wechat.login;
+package com.letwgo.wechat.main;
 
 import me.chanjar.weixin.common.util.StringUtils;
 import me.chanjar.weixin.mp.api.WxMpConfigStorage;

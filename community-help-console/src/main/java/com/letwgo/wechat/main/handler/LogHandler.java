@@ -15,7 +15,7 @@ public class LogHandler implements WxMpMessageHandler {
   @Override
   public WxMpXmlOutMessage handle(WxMpXmlMessage wxMessage, Map<String, Object> context, WxMpService wxMpService,
                                   WxSessionManager sessionManager) {
-    System.out.println(wxMessage.toString());
+    System.out.println("log:"+wxMessage.toString());
     return null;
   }
 }

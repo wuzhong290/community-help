@@ -78,6 +78,10 @@
 
     <repositories>
         <repository>
+            <id>maven.oschina.net</id>
+            <url>http://maven.oschina.net/content/groups/public/</url>
+        </repository>
+        <repository>
             <id>lilyproject.snapshot</id>
             <name>Lily Maven snapshot repository</name>
             <url>http://lilyproject.org/maven/maven2/deploy/</url>
@@ -107,11 +111,6 @@
         <repository>
             <id>maven.tempo-db.com</id>
             <url>http://maven.tempo-db.com/artiferactory/list/twitter/</url>
-        </repository>
-
-        <repository>
-            <id>maven.oschina.net</id>
-            <url>http://maven.oschina.net/content/groups/public/</url>
         </repository>
 
     </repositories>
