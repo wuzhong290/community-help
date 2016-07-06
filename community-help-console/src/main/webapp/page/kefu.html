@@ -14,37 +14,8 @@
     <script src="http://code.jquery.com/jquery-3.0.0.js" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo="
             crossorigin="anonymous"></script>
     <style>
-        .box {
-            margin: 0px;
-            border-radius: 0px 0px 0px 0px;
-            float: left;
-            width: 100%;
-        }
-
-        .vote {
-            background: #fff;
-            box-shadow: 0px 0px 3px #a5a5a5;
-            margin-top: 10px;
-            width: 100%;
-            float: left; /*  border:1px solid #CCC;border-radius:4px; margin:5px;*/
-        }
-
-        .qq_top {
-            color: #4292ce;
-            padding: 10px;
-            line-height: 22px;
-            font-size: 16px;
-            float: left;
-        }
-
-        .qq_bot {
-            width: 100%;
-            float: left;
-        }
-
         .qq {
-            width: 50%;
-            float: left;
+            width: 100%;
         }
 
         .qq a {
@@ -76,7 +47,6 @@
 
         .phone {
             width: 100%;
-            float: left;
         }
 
         .phone a {
@@ -92,8 +62,8 @@
         .phone a span {
             width: 50px;
             height: 50px;
-            float: left;
             display: block;
+            float: left;
             background: url(../images/tel.png) no-repeat;
             border-right: 1px solid #dedede;
             background-size: 100%;
@@ -209,12 +179,10 @@
     </ul>
 </footer>
 <section class="ui-container">
-    <div class="box">
-        <div class="vote">
-            <div class="qq_top">
-                爱心客服
-            </div>
-            <div class="qq_bot">
+    <section class="ui-panel">
+        <h2 class="ui-arrowlink">QQ客服</h2>
+        <ul class="ui-grid-halve">
+            <li>
                 <div class="qq">
                     <a href="http://wpa.qq.com/msgrd?v=3&uin=419479707&site=qq&menu=yes">
                         <span></span>
@@ -223,6 +191,8 @@
                         </p>
                     </a>
                 </div>
+            </li>
+            <li>
                 <div class="qq">
                     <a href="http://wpa.qq.com/msgrd?v=3&uin=419479707&site=qq&menu=yes">
                         <span></span>
@@ -231,6 +201,8 @@
                         </p>
                     </a>
                 </div>
+            </li>
+            <li>
                 <div class="qq">
                     <a href="http://wpa.qq.com/msgrd?v=3&uin=419479707&site=qq&menu=yes">
                         <span></span>
@@ -239,6 +211,8 @@
                         </p>
                     </a>
                 </div>
+            </li>
+            <li>
                 <div class="qq">
                     <a href="http://wpa.qq.com/msgrd?v=3&uin=419479707&site=qq&menu=yes">
                         <span></span>
@@ -247,22 +221,20 @@
                         </p>
                     </a>
                 </div>
-            </div>
-        </div>
-        <div class="vote">
-            <div class="qq_top">
-                17712858268
-            </div>
-            <div class="qq_bot">
+            </li>
+        </ul>
+        <h2 class="ui-arrowlink">电话客服</h2>
+        <ul class="ui-grid">
+            <li style="width: 100%;">
                 <div class="phone">
                     <a href="tel:17712858268">
                         <span></span>
                         <p>17712858268</p>
                     </a>
                 </div>
-            </div>
-        </div>
-    </div>
+            </li>
+        </ul>
+    </section>
 </section>
 <script>
     $('.ui-list li,.ui-tiled li').click(function () {
