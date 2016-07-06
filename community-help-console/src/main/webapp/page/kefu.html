@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="user-scalable=no,width=device-width"/>
     <meta name="format-detection" content="telephone=no"/>
-    <title>关于我们</title>
+    <title>微客服</title>
     <script type="text/javascript" src="http://tajs.qq.com/stats?sId=37342703" charset="UTF-8"></script>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/frozen.css">
@@ -13,6 +13,103 @@
     <script src="../js/frozen.js"></script>
     <script src="http://code.jquery.com/jquery-3.0.0.js" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo="
             crossorigin="anonymous"></script>
+    <style>
+        .box {
+            margin: 0px;
+            border-radius: 0px 0px 0px 0px;
+            float: left;
+            width: 100%;
+        }
+
+        .vote {
+            background: #fff;
+            box-shadow: 0px 0px 3px #a5a5a5;
+            margin-top: 10px;
+            width: 100%;
+            float: left; /*  border:1px solid #CCC;border-radius:4px; margin:5px;*/
+        }
+
+        .qq_top {
+            color: #4292ce;
+            padding: 10px;
+            line-height: 22px;
+            font-size: 16px;
+            float: left;
+        }
+
+        .qq_bot {
+            width: 100%;
+            float: left;
+        }
+
+        .qq {
+            width: 50%;
+            float: left;
+        }
+
+        .qq a {
+            display: block;
+            margin: 10px;
+            height: 90px;
+            background: #eee;
+            border-radius: 5px;
+            box-shadow: 0px 0px 3px #999;
+            border: 1px solid #f6f6f6;
+        }
+
+        .qq a span {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto;
+            display: block;
+            background: url(../images/QQ.png) no-repeat;
+            background-size: 100%;
+        }
+
+        .qq a p {
+            color: #333;
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+        }
+
+        .phone {
+            width: 100%;
+            float: left;
+        }
+
+        .phone a {
+            display: block;
+            margin: 10px;
+            height: 50px;
+            background: #eee;
+            border-radius: 5px;
+            box-shadow: 0px 0px 3px #999;
+            border: 1px solid #f6f6f6;
+        }
+
+        .phone a span {
+            width: 50px;
+            height: 50px;
+            float: left;
+            display: block;
+            background: url(../images/tel.png) no-repeat;
+            border-right: 1px solid #dedede;
+            background-size: 100%;
+        }
+
+        .phone a p {
+            color: #428ece;
+            text-align: center;
+            height: 50px;
+            float: left;
+            line-height: 50px;
+            text-indent: 10px;
+            font-size: 20px;
+            border-left: 1px solid #fff;
+        }
+    </style>
 </head>
 <body ontouchstart>
 <div onClick="shareclose();" id="divsharefull"
@@ -37,10 +134,10 @@
             "bdStyle": "0",
             "bdSize": "24"
         },
-        "slide" : [{
-            bdImg : 0,
-            bdPos : "right",
-            bdTop : 200,
+        "slide": [{
+            bdImg: 0,
+            bdPos: "right",
+            bdTop: 200,
             bdSize: 24
         }],
         "share": {}
@@ -49,9 +146,9 @@
 
     function shareload() {
         if (document.getElementById('divsharefull').style.display == "none")return;
-        if (parseInt(document.documentElement.offsetHeight) > parseInt(document.documentElement.clientHeight)){
+        if (parseInt(document.documentElement.offsetHeight) > parseInt(document.documentElement.clientHeight)) {
             document.getElementById('divsharefull').style.height = document.documentElement.offsetHeight + 'px';
-        } else{
+        } else {
             document.getElementById('divsharefull').style.height = document.documentElement.clientHeight + 'px';
         }
         setTimeout(shareload, 800);
@@ -59,9 +156,9 @@
 
     function shareopen() {
         document.getElementById("divshare").style.left = (document.documentElement.clientWidth - parseInt(document.getElementById("divshare").style.width)) / 2 + "px";
-        if (parseInt(document.documentElement.offsetHeight) > parseInt(document.documentElement.clientHeight)){
+        if (parseInt(document.documentElement.offsetHeight) > parseInt(document.documentElement.clientHeight)) {
             document.getElementById('divsharefull').style.height = document.documentElement.offsetHeight + 'px';
-        } else{
+        } else {
             document.getElementById('divsharefull').style.height = document.documentElement.clientHeight + 'px';
         }
         $("#divshare").fadeIn(1000);
@@ -78,7 +175,7 @@
     <script>
         if (document.referrer == "") document.getElementById('topback').style.visibility = 'hidden';
     </script>
-    <h1>关于我们</h1>
+    <h1>微客服</h1>
     <button class="ui-btn">回首页</button>
 </header>
 <script>
@@ -112,20 +209,60 @@
     </ul>
 </footer>
 <section class="ui-container">
-    <h1 class="ui-txt-justify">公司概要</h1>
-    <h2 class="ui-txt-muted">[2016-06-06]</h2>
-    <br/><h3>公司概要如下：</h3>
-    <h4 class="ui-txt-default">【公司简介】</h4>
-    <h6 class="ui-txt-info">提供小区团购服务、信息发布、新闻动态。</h6>
-    <br/><h4 class="ui-txt-default">【公司文化】</h4>
-    <h6 class="ui-txt-info">客户第一、诚实守信、匠人精神</h6>
-    <br/><h4 class="ui-txt-default">【公司愿景】</h4>
-    <h6 class="ui-txt-info">
-        生产者：劳动成果可以用实物呈现的劳动者
-    <br/>服务者：劳动成果不能用实物呈现的劳动者
-    <br/>消费者：消费劳动成果的人</h6>
-    <br/><h4 class="ui-txt-default">【公司使命】</h4>
-    <h6 class="ui-txt-info ui-txt-justify">减少了中间环节，使得生产者和消费者的趋向于直接交易，从而在一定程度上改变了整个社会经济运行的方式。只要你肯为别人服务，人人都可以为商人，这个时候我们所谓的商人不存在了，商人就是服务者。财富趋于均衡，按劳分配，劳动光荣，最后达到按需分配。</h6>
+    <div class="box">
+        <div class="vote">
+            <div class="qq_top">
+                爱心客服
+            </div>
+            <div class="qq_bot">
+                <div class="qq">
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=419479707&site=qq&menu=yes">
+                        <span></span>
+                        <p>
+                            售前客服小二
+                        </p>
+                    </a>
+                </div>
+                <div class="qq">
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=419479707&site=qq&menu=yes">
+                        <span></span>
+                        <p>
+                            售后客服小二
+                        </p>
+                    </a>
+                </div>
+                <div class="qq">
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=419479707&site=qq&menu=yes">
+                        <span></span>
+                        <p>
+                            在线意见反馈
+                        </p>
+                    </a>
+                </div>
+                <div class="qq">
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=419479707&site=qq&menu=yes">
+                        <span></span>
+                        <p>
+                            投放广告咨询
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="vote">
+            <div class="qq_top">
+                17712858268
+            </div>
+            <div class="qq_bot">
+                <div class="phone">
+                    <a href="tel:17712858268">
+                        <span></span>
+                        <p>17712858268</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <script>
     $('.ui-list li,.ui-tiled li').click(function () {
