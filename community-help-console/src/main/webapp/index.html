@@ -111,7 +111,7 @@ style="opacity:0.2;position:absolute;z-index:980;width:100%; height:100%;backgro
         <ul class="slides">
             <li>
                 <a href="page/productshow.html">
-                    <img src="images/1408672627.jpg" width="100%"/>
+                    <img src="images/1408672632.jpg" width="100%"/>
                     <p class="flex-caption">1</p>
                 </a>
             </li>
@@ -176,13 +176,15 @@ style="opacity:0.2;position:absolute;z-index:980;width:100%; height:100%;backgro
     </ul>
 </section><!-- /.ui-container-->
 <script>
-    $('.ui-list li,.ui-tiled li').click(function () {
-        if ($(this).data('href')) {
-            location.href = $(this).data('href');
-        }
-    });
-    $('.ui-header .ui-btn').click(function () {
-        location.href = 'index.html';
+    $(document).ready(function () {
+        $('.ui-list li,.ui-tiled li').click(function () {
+            if ($(this).data('href')) {
+                location.href = $(this).data('href');
+            }
+        });
+        $('.ui-header .ui-btn').click(function () {
+            location.href = 'index.html';
+        });
     });
     function productdetail(url) {
         window.location.href = url;

@@ -148,11 +148,6 @@
     <h1>微客服</h1>
     <button class="ui-btn">回首页</button>
 </header>
-<script>
-    $('.ui-header .ui-btn').click(function () {
-        location.href = '../index.html';
-    });
-</script>
 
 <footer class="ui-footer ui-footer-btn">
     <ul class="ui-tiled ui-border-t">
@@ -237,10 +232,15 @@
     </section>
 </section>
 <script>
-    $('.ui-list li,.ui-tiled li').click(function () {
-        if ($(this).data('href')) {
-            location.href = $(this).data('href');
-        }
+    $(document).ready(function () {
+        $('.ui-list li,.ui-tiled li').click(function () {
+            if ($(this).data('href')) {
+                location.href = $(this).data('href');
+            }
+        });
+        $('.ui-header .ui-btn').click(function () {
+            location.href = '../index.html';
+        });
     });
 </script>
 </body>
