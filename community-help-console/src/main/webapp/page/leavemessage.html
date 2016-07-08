@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="../css/foot/iconfont.css">
     <script src="../js/zepto.min.js"></script>
     <script src="../js/frozen.js"></script>
-    <script src="http://code.jquery.com/jquery-3.0.0.js" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo="
-            crossorigin="anonymous"></script>
 </head>
 <body ontouchstart>
 <div onClick="shareclose();" id="divsharefull"
@@ -81,11 +79,6 @@
     <h1>我要留言</h1>
     <button class="ui-btn">回首页</button>
 </header>
-<script>
-    $('.ui-header .ui-btn').click(function () {
-        location.href = '../index.html';
-    });
-</script>
 
 <footer class="ui-footer ui-footer-btn">
     <ul class="ui-tiled ui-border-t">
@@ -117,35 +110,70 @@
             <p class="form-desc">我要留言</p>
             <div class="form-block">
                 <div class="ui-form ui-border-t">
-                    <form action="#">
+                    <form id="messageForm" action="" target="id_iframe">
                         <div class="ui-form-item ui-form-item-pure ui-border-b">
-                            <input type="text" placeholder="姓名">
+                            <input type="text" name="username" placeholder="姓名">
                             <a href="#" class="ui-icon-close"></a>
                         </div>
                         <div class="ui-form-item ui-form-item-pure ui-border-b">
-                            <input type="text" placeholder="手机号">
+                            <input type="text" name="userphone" placeholder="手机号">
                             <a href="#" class="ui-icon-close"></a>
                         </div>
                         <div class="ui-form-item ui-form-item-pure ui-border-b">
-                            <input type="text" placeholder="微信号">
+                            <input type="text" name="winxin" placeholder="微信号">
                             <a href="#" class="ui-icon-close"></a>
                         </div>
                         <div class="ui-form-item ui-form-item-pure ui-border-b" style="height: 100px;">
-                            <input type="textarea" placeholder="留言内容">
+                            <input type="textarea" name="content" placeholder="留言内容">
                             <a href="#" class="ui-icon-close"></a>
                         </div>
-                        <button class="ui-btn">提交</button>
+                        <button id="button" class="ui-btn">提交</button>
                     </form>
                 </div>
             </div>
         </div>
+        <div class="ui-dialog">
+            <div class="ui-dialog-cnt">
+                <header class="ui-dialog-hd ui-border-b">
+                    <h3>提示信息</h3>
+                    <i class="ui-dialog-close" id="close" data-role="button"></i>
+                </header>
+                <div class="ui-dialog-bd">
+                    <div>我们会尽快处理你的留言，必要时和您联系，谢谢！</div>
+                </div>
+            </div>
+        </div>
     </section>
+    <iframe id="id_iframe" name="id_iframe" style="display:none;"></iframe>
 </section>
 <script>
-    $('.ui-list li,.ui-tiled li').click(function () {
-        if ($(this).data('href')) {
-            location.href = $(this).data('href');
-        }
+    $(document).ready(function () {
+
+        $('.ui-header .ui-btn').click(function () {
+            location.href = '../index.html';
+        });
+
+        $('.ui-list li,.ui-tiled li').click(function () {
+            if ($(this).data('href')) {
+                location.href = $(this).data('href');
+            }
+        });
+
+        $("#button").click(function () {
+            $.ajax({
+                type: "POST",
+                url: '../message/doMessage',//提交的URL
+                data: $('#messageForm').serialize(), //要提交的表单,必须使用name属性
+                success: function (data) {
+                    $(".ui-dialog").dialog("show");
+                },
+                error: function (request) {
+                }
+            });
+        });
+        $("#close").click(function(){
+            $(".ui-dialog").dialog("hide");
+        });
     });
 </script>
 </body>

@@ -7,3 +7,6 @@ scp community-help-console.war  root@182.61.30.90:/home/centos/tomcat/webapps/co
 scp community-help-console.war  root@182.61.30.90:/home/centos/tomcat/webapps/community-help-console.war
 scp QQ.png  root@182.61.30.90:/home/centos/tomcat/webapps/community-help-console/images/QQ.png
 
+scp index.html  root@182.61.30.90:/home/centos/tomcat/webapps/community-help-console/imdex.html
+scp -r page root@182.61.30.90:/home/centos/tomcat/webapps/community-help-console
+
