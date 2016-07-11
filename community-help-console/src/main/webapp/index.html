@@ -8,27 +8,36 @@
     <script type="text/javascript" src="http://tajs.qq.com/stats?sId=37342703" charset="UTF-8"></script>
     <link rel="stylesheet" href="css/frozen.css">
     <link rel="stylesheet" href="css/foot/iconfont.css">
-    <link href="https://cdn.jsdelivr.net/flexslider/2.6.1/flexslider.css" rel="stylesheet" type="text/css"/>
     <script src="js/zepto.min.js"></script>
     <script src="js/frozen.js"></script>
     <script src="http://code.jquery.com/jquery-3.0.0.js" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo="
             crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/flexslider/2.6.1/jquery.flexslider-min.js"></script>
     <style>
-        .myflexslider {
-            position: relative
+        .headermenu {
+            width: 100%;
+        }
+        .headermenu a {
+            display: block;
+            height: 90px;
+            background: #eee;
+            box-shadow: 0px 0px 3px #999;
+            border: 1px solid #f6f6f6;
         }
 
-        .flex-caption {
-            width: 96%;
-            padding: 2%;
-            left: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, .5);
-            color: #fff;
-            text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
+        .headermenu a span {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto;
+            display: block;
+            background-size: 100%;
+        }
+
+        .headermenu a p {
+            color: #333;
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
             font-size: 14px;
-            line-height: 18px;
         }
     </style>
 </head>
@@ -70,7 +79,7 @@ style="opacity:0.2;position:absolute;z-index:980;width:100%; height:100%;backgro
     <script>
         if (document.referrer == "") document.getElementById('topback').style.visibility = 'hidden';
     </script>
-    <h1>首页</h1>
+    <h1>产品展示</h1>
     <button class="ui-btn">回首页</button>
 </header>
 <footer class="ui-footer ui-footer-btn">
@@ -78,10 +87,6 @@ style="opacity:0.2;position:absolute;z-index:980;width:100%; height:100%;backgro
         <li data-href="index.html" class="ui-border-r">
             <i class="icon iconfont">&#xe62a;</i>
             <div>首页</div>
-        </li>
-        <li data-href="page/productshow.html" class="ui-border-r">
-            <i class="icon iconfont">&#xf000d;</i>
-            <div>产品</div>
         </li>
         <li data-href="page/kefu.html" class="ui-border-r">
             <i class="icon iconfont">&#xe706;</i>
@@ -98,79 +103,339 @@ style="opacity:0.2;position:absolute;z-index:980;width:100%; height:100%;backgro
     </ul>
 </footer>
 <section class="ui-container">
-    <!--幻灯片 开始-->
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('.myflexslider').flexslider({
-                animation: "slide",
-                controlNav: false
-            });
-        });
-    </script>
-    <div class="myflexslider" style="margin-top:1px;">
-        <ul class="slides">
-            <li>
+    <ul class="ui-tiled">
+        <li>
+            <div class="headermenu">
                 <a href="page/productshow.html">
-                    <img src="images/1408672632.jpg" width="100%"/>
-                    <p class="flex-caption">1</p>
+                    <span style="background: url(images/menus/ly.png) no-repeat;"></span>
+                    <p>
+                        粮油
+                    </p>
                 </a>
-            </li>
-            <li>
-                <a href="page/productshow.html">
-                    <img src="images/1408672648.jpg" width="100%"/>
-                    <p class="flex-caption">2</p>
-                </a>
-            </li>
-            <li>
-                <a href="page/productshow.html">
-                    <img src="images/1408672632.jpg" width="100%"/>
-                    <p class="flex-caption">3</p>
-                </a>
-            </li>
-            <li>
-                <a href="page/productshow.html">
-                    <img src="images/1409647536.jpg" width="100%"/>
-                    <p class="flex-caption">4</p>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <!--幻灯片 结束-->
-    <ul class="ui-list ui-list-link ui-border-tb">
-        <li class="ui-border-t" onclick="productdetail('page/about.html');">
-            <div class="ui-list-img">
-                <span style="background-image:url(http://placeholder.qiniudn.com/80x80)"></span>
-            </div>
-            <div class="ui-list-info">
-                <h4 class="ui-nowrap">关于我们</h4>
-                <p class="ui-nowrap">关于我们</p>
             </div>
         </li>
-        <li class="ui-border-t" onclick="productdetail('page/productshow.html');">
-            <div class="ui-list-img">
-                <span style="background-image:url(http://placeholder.qiniudn.com/80x80)"></span>
-            </div>
-            <div class="ui-list-info">
-                <h4>产品展厅</h4>
-                <p class="ui-nowrap">产品展厅</p>
-            </div>
-        </li>
-        <li class="ui-border-t" onclick="productdetail('page/news.html');">
-            <div class="ui-list-img">
-                <span style="background-image:url(http://placeholder.qiniudn.com/80x80)"></span>
-            </div>
-            <div class="ui-list-info">
-                <h4>新闻动态</h4>
-                <p class="ui-nowrap">新闻动态</p>
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/sc.png) no-repeat;"></span>
+                    <p>
+                        蔬菜
+                    </p>
+                </a>
             </div>
         </li>
-        <li class="ui-border-t" onclick="productdetail('page/leavemessage.html');">
-            <div class="ui-list-img">
-                <span style="background-image:url(http://placeholder.qiniudn.com/80x80)"></span>
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/sg.png) no-repeat;"></span>
+                    <p>
+                        水果
+                    </p>
+                </a>
             </div>
-            <div class="ui-list-info">
-                <h4>联系我们</h4>
-                <p class="ui-nowrap">联系我们</p>
+        </li>
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/jg.png) no-repeat;"></span>
+                    <p>
+                        炒货
+                    </p>
+                </a>
+            </div>
+        </li>
+    </ul>
+    <ul class="ui-tiled">
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/ly.png) no-repeat;"></span>
+                    <p>
+                        粮油
+                    </p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/sc.png) no-repeat;"></span>
+                    <p>
+                        蔬菜
+                    </p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/sg.png) no-repeat;"></span>
+                    <p>
+                        水果
+                    </p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/jg.png) no-repeat;"></span>
+                    <p>
+                        炒货
+                    </p>
+                </a>
+            </div>
+        </li>
+    </ul>
+    <ul class="ui-tiled">
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/ly.png) no-repeat;"></span>
+                    <p>
+                        粮油
+                    </p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/sc.png) no-repeat;"></span>
+                    <p>
+                        蔬菜
+                    </p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/sg.png) no-repeat;"></span>
+                    <p>
+                        水果
+                    </p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/jg.png) no-repeat;"></span>
+                    <p>
+                        炒货
+                    </p>
+                </a>
+            </div>
+        </li>
+    </ul>
+    <ul class="ui-tiled">
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/ly.png) no-repeat;"></span>
+                    <p>
+                        粮油
+                    </p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/sc.png) no-repeat;"></span>
+                    <p>
+                        蔬菜
+                    </p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/sg.png) no-repeat;"></span>
+                    <p>
+                        水果
+                    </p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/jg.png) no-repeat;"></span>
+                    <p>
+                        炒货
+                    </p>
+                </a>
+            </div>
+        </li>
+    </ul>
+    <ul class="ui-tiled">
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/ly.png) no-repeat;"></span>
+                    <p>
+                        粮油
+                    </p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/sc.png) no-repeat;"></span>
+                    <p>
+                        蔬菜
+                    </p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/sg.png) no-repeat;"></span>
+                    <p>
+                        水果
+                    </p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/jg.png) no-repeat;"></span>
+                    <p>
+                        炒货
+                    </p>
+                </a>
+            </div>
+        </li>
+    </ul>
+    <ul class="ui-tiled">
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/ly.png) no-repeat;"></span>
+                    <p>
+                        粮油
+                    </p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/sc.png) no-repeat;"></span>
+                    <p>
+                        蔬菜
+                    </p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/sg.png) no-repeat;"></span>
+                    <p>
+                        水果
+                    </p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/jg.png) no-repeat;"></span>
+                    <p>
+                        炒货
+                    </p>
+                </a>
+            </div>
+        </li>
+    </ul>
+    <ul class="ui-tiled">
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/ly.png) no-repeat;"></span>
+                    <p>
+                        粮油
+                    </p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/sc.png) no-repeat;"></span>
+                    <p>
+                        蔬菜
+                    </p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/sg.png) no-repeat;"></span>
+                    <p>
+                        水果
+                    </p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/jg.png) no-repeat;"></span>
+                    <p>
+                        炒货
+                    </p>
+                </a>
+            </div>
+        </li>
+    </ul>
+    <ul class="ui-tiled">
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/ly.png) no-repeat;"></span>
+                    <p>
+                        粮油
+                    </p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/sc.png) no-repeat;"></span>
+                    <p>
+                        蔬菜
+                    </p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/sg.png) no-repeat;"></span>
+                    <p>
+                        水果
+                    </p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="headermenu">
+                <a href="page/productshow.html">
+                    <span style="background: url(images/menus/jg.png) no-repeat;"></span>
+                    <p>
+                        炒货
+                    </p>
+                </a>
             </div>
         </li>
     </ul>
