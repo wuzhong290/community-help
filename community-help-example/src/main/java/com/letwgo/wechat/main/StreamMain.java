@@ -32,7 +32,7 @@ public class StreamMain {
         boolean flag1 = persons.stream().allMatch(new FilterPredicate());
         System.out.println(flag +":"+flag1);
 
-        List<Person> persons1 =persons
+        List<Person> sortPersons =persons
                 .stream()
                 .sorted(new SortComparator()).collect(Collectors.<Person>toList());
         //.forEach(new ForConsumer());
