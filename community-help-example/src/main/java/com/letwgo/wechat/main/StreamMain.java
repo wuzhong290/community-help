@@ -17,6 +17,7 @@ public class StreamMain {
                 new Person("Peter", 23),
                 new Person("Pamela", 23),
                 new Person("David", 12));
+
         Integer sum = 0;
         Integer ageSum = persons.parallelStream()
                 .filter(new FilterPredicate())
@@ -26,10 +27,15 @@ public class StreamMain {
                         new ReduceBinaryOperator()
                 );
         System.out.println(ageSum);
+
+        boolean flag = persons.stream().anyMatch(new FilterPredicate());
+        boolean flag1 = persons.stream().allMatch(new FilterPredicate());
+        System.out.println(flag +":"+flag1);
+
         List<Person> persons1 =persons
                 .stream()
                 .sorted(new SortComparator()).collect(Collectors.<Person>toList());
-                //.forEach(new ForConsumer());
+        //.forEach(new ForConsumer());
         System.out.println("");
     }
 }
